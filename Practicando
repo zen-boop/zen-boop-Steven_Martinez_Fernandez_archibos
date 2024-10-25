@@ -1,0 +1,44 @@
+print("");print("practicando");print("")
+from datetime import datetime
+def escribir_datos():
+    try:
+        nombre = input("Introduce tu nombre: ")
+        edad = input("Introduce tu edad: ")
+        ahora = datetime.now()
+        fecha_hora = ahora.strftime("%Y-%m-%d %H:%M:%S")
+        with open('arhivo.txt', 'a') as archivo:
+            archivo.write(f'Nombre: {nombre}\n')
+            archivo.write(f'Edad: {edad}\n')
+            archivo.write(f'Fecha y hora: {fecha_hora}\n')
+            archivo.write('---\n')
+        print("Datos guardados exitosamente.")
+    except Exception as e:
+        print(f"Error al escribir en el archivo: {e}")
+def leer_datos():
+    try:
+        with open('arhivo.txt', 'r') as archivo:
+            contenido = archivo.read()
+            print("Contenido del archivo:")
+            print(contenido)
+    except FileNotFoundError:
+        print("El archivo no existe.")
+    except Exception as e:
+        print(f"Error al leer el archivo: {e}")
+def main():
+    while True:
+        print("\nOpciones:")
+        print("1. Escribir datos")
+        print("2. Leer datos")
+        print("3. Salir")
+        opcion = input("Selecciona una opción: ")
+        if opcion == '1':
+            escribir_datos()
+        elif opcion == '2':
+            leer_datos()
+        elif opcion == '3':
+            print("Saliendo del programa.")
+            break
+        else:
+            print("Opción no válida. Inténtalo de nuevo.")
+if __name__ == "__main__":
+    main()
