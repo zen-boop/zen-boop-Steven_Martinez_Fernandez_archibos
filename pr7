@@ -1,0 +1,4 @@
+import os
+
+# Eliminar el archivo "demofile.txt"
+os.remove("demofile.txt")
