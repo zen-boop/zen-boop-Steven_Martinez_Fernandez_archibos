@@ -1,0 +1,5 @@
+#Si el archivo se encuentra en una ubicación diferente, deberá especificar la ruta del archivo, de esta manera:
+#Ejemplo
+#Abrir un archivo en una ubicación diferente:
+f = open("c:\\mis programas\demofile.txt", "r")
+print(f.read())
