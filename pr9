@@ -1,0 +1,4 @@
+import os
+
+# Eliminar la carpeta "myfolder"
+os.rmdir("hola")
