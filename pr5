@@ -1,0 +1,8 @@
+# Sobrescribir el contenido existente y luego imprimir un mensaje
+with open("archivo.txt", "w") as archivo:
+    archivo.write("Este es un nuevo contenido.\n")
+    print("Se ha escrito nuevo contenido en el archivo.")
+# Anexar contenido al final del archivo y luego imprimir un mensaje
+with open("archivo.txt", "a") as archivo:
+    archivo.write("Este contenido se añade al final.\n")
+    print("Se ha añadido contenido al final del archivo.")
